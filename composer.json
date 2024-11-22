@@ -1,0 +1,75 @@
+{
+    "name": "juststeveking/graphql",
+    "description": "Build GraphQL Queries and Mutations in a safe and easy way.",
+    "version": "0.0.1",
+    "type": "library",
+    "keywords": ["php","graphql","graphql integration"],
+    "homepage": "https://github.com/juststeveking/graphql",
+    "readme": "README.md",
+    "license": "MIT",
+    "authors": [
+        {
+            "role": "Developer",
+            "name": "Steve McDougall",
+            "email": "juststevemcd@gmail.com",
+            "homepage": "https://juststeveking.link"
+        }
+    ],
+    "support": {},
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/juststeveking"
+        }
+    ],
+    "require": {
+        "php": "^8.3"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.18",
+        "phpstan/phpstan": "2.0.0",
+        "phpstan/phpstan-strict-rules": "^2.0",
+        "phpunit/phpunit": "^11.4",
+        "roave/security-advisories": "dev-latest"
+    },
+    "autoload": {
+        "psr-4": {
+            "JustSteveKing\\GraphQL\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JustSteveKing\\GraphQL\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "github-protocols": [
+            "git", "ssh", "https", "http"
+        ],
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "classmap-authoritative": true,
+        "bump-after-update": true,
+        "allow-plugins": {}
+    },
+    "scripts": {
+        "lint": [
+            "./vendor/bin/pint --test"
+        ],
+        "pint": [
+            "./vendor/bin/pint"
+        ],
+        "stan": [
+            "./vendor/bin/phpstan analyse --memory-limit=3g"
+        ],
+        "test": [
+            "./vendor/bin/phpunit --testdox"
+        ]
+    },
+    "scripts-descriptions": {}
+}
